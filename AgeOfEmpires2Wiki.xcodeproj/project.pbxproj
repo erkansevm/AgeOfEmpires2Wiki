@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA782CAA27B5CE39000FFD27 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */; };
 		DAA8FEEF27B5C772006A525A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEEE27B5C772006A525A /* AppDelegate.swift */; };
 		DAA8FEF127B5C772006A525A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEF027B5C772006A525A /* SceneDelegate.swift */; };
 		DAA8FEF327B5C772006A525A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEF227B5C772006A525A /* ViewController.swift */; };
 		DAA8FEF627B5C772006A525A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA8FEF427B5C772006A525A /* Main.storyboard */; };
 		DAA8FEF827B5C774006A525A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA8FEF727B5C774006A525A /* Assets.xcassets */; };
 		DAA8FEFB27B5C774006A525A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA8FEF927B5C774006A525A /* LaunchScreen.storyboard */; };
+		DAE7794127C7FE20004E6236 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7794027C7FE20004E6236 /* ItemsViewController.swift */; };
+		DAE7794327C8011B004E6236 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7794227C8011B004E6236 /* NetworkManager.swift */; };
+		DAE7794727C802D6004E6236 /* Civilization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7794627C802D6004E6236 /* Civilization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		DAA8FEEB27B5C772006A525A /* AgeOfEmpires2Wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgeOfEmpires2Wiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA8FEEE27B5C772006A525A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA8FEF027B5C772006A525A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		DAA8FEF727B5C774006A525A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAA8FEFA27B5C774006A525A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAA8FEFC27B5C774006A525A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAE7794027C7FE20004E6236 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		DAE7794227C8011B004E6236 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DAE7794627C802D6004E6236 /* Civilization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Civilization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA782CA427B5CD70000FFD27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAE7794627C802D6004E6236 /* Civilization.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA782CA527B5CD75000FFD27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAA8FEF727B5C774006A525A /* Assets.xcassets */,
+				DA782CA727B5CD85000FFD27 /* Storyboards */,
+				DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA782CA627B5CD79000FFD27 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAA8FEF227B5C772006A525A /* ViewController.swift */,
+				DAE7794027C7FE20004E6236 /* ItemsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA782CA727B5CD85000FFD27 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DAA8FEF427B5C772006A525A /* Main.storyboard */,
+				DAA8FEF927B5C774006A525A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DA782CA827B5CDCB000FFD27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAA8FEEE27B5C772006A525A /* AppDelegate.swift */,
+				DAA8FEF027B5C772006A525A /* SceneDelegate.swift */,
+				DAE7794227C8011B004E6236 /* NetworkManager.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DAA8FEE227B5C772006A525A = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +110,10 @@
 		DAA8FEED27B5C772006A525A /* AgeOfEmpires2Wiki */ = {
 			isa = PBXGroup;
 			children = (
-				DAA8FEEE27B5C772006A525A /* AppDelegate.swift */,
-				DAA8FEF027B5C772006A525A /* SceneDelegate.swift */,
-				DAA8FEF227B5C772006A525A /* ViewController.swift */,
-				DAA8FEF427B5C772006A525A /* Main.storyboard */,
-				DAA8FEF727B5C774006A525A /* Assets.xcassets */,
-				DAA8FEF927B5C774006A525A /* LaunchScreen.storyboard */,
+				DA782CA827B5CDCB000FFD27 /* Resources */,
+				DA782CA627B5CD79000FFD27 /* Controller */,
+				DA782CA527B5CD75000FFD27 /* View */,
+				DA782CA427B5CD70000FFD27 /* Model */,
 				DAA8FEFC27B5C774006A525A /* Info.plist */,
 			);
 			path = AgeOfEmpires2Wiki;
@@ -137,8 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE7794727C802D6004E6236 /* Civilization.swift in Sources */,
+				DAE7794327C8011B004E6236 /* NetworkManager.swift in Sources */,
+				DAE7794127C7FE20004E6236 /* ItemsViewController.swift in Sources */,
 				DAA8FEF327B5C772006A525A /* ViewController.swift in Sources */,
 				DAA8FEEF27B5C772006A525A /* AppDelegate.swift in Sources */,
+				DA782CAA27B5CE39000FFD27 /* CategoriesCollectionViewCell.swift in Sources */,
 				DAA8FEF127B5C772006A525A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
