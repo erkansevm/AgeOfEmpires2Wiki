@@ -63,9 +63,18 @@ extension ItemsViewController: UITableViewDelegate, UITableViewDataSource {
         return civs.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = DetailViewController()
+        vc.civ = civs[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellim")!
         cell.textLabel?.text = civs[indexPath.row].name
+        cell.accessoryType = .detailDisclosureButton
         return cell
     }
     

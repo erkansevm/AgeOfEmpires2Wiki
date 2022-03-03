@@ -157,6 +157,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
         let vc = ItemsViewController()
         vc.titleString = categories[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
