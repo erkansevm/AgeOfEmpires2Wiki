@@ -15,6 +15,7 @@
 		DAA8FEF627B5C772006A525A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA8FEF427B5C772006A525A /* Main.storyboard */; };
 		DAA8FEF827B5C774006A525A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA8FEF727B5C774006A525A /* Assets.xcassets */; };
 		DAA8FEFB27B5C774006A525A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA8FEF927B5C774006A525A /* LaunchScreen.storyboard */; };
+		DAAC9D8C27D4207B00D0C435 /* DetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9D8B27D4207B00D0C435 /* DetailHeader.swift */; };
 		DAE7794127C7FE20004E6236 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7794027C7FE20004E6236 /* ItemsViewController.swift */; };
 		DAE7794327C8011B004E6236 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7794227C8011B004E6236 /* NetworkManager.swift */; };
 		DAE7794727C802D6004E6236 /* Civilization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7794627C802D6004E6236 /* Civilization.swift */; };
@@ -33,6 +34,7 @@
 		DAA8FEF727B5C774006A525A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAA8FEFA27B5C774006A525A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAA8FEFC27B5C774006A525A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAAC9D8B27D4207B00D0C435 /* DetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeader.swift; sourceTree = "<group>"; };
 		DAE7794027C7FE20004E6236 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		DAE7794227C8011B004E6236 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DAE7794627C802D6004E6236 /* Civilization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Civilization.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				DA782CA727B5CD85000FFD27 /* Storyboards */,
 				DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */,
 				DAFB33CA27D103A6004019FE /* CivBonusTableViewCell.swift */,
+				DAAC9D8B27D4207B00D0C435 /* DetailHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				DAE7794127C7FE20004E6236 /* ItemsViewController.swift in Sources */,
 				DAA8FEF327B5C772006A525A /* ViewController.swift in Sources */,
 				DAA8FEEF27B5C772006A525A /* AppDelegate.swift in Sources */,
+				DAAC9D8C27D4207B00D0C435 /* DetailHeader.swift in Sources */,
 				DA782CAA27B5CE39000FFD27 /* CategoriesCollectionViewCell.swift in Sources */,
 				DAFB33CB27D103A6004019FE /* CivBonusTableViewCell.swift in Sources */,
 				DAFB33C927D0F562004019FE /* UIView+.swift in Sources */,

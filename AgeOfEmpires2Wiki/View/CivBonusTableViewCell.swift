@@ -10,38 +10,59 @@ import UIKit
 class CivBonusTableViewCell: UITableViewCell {
     static let identifier = "CivBonusTableViewCell"
     
+    
+    //MARK: - UI
+    private let containerView: UIView = {
+        let vw = UIView()
+        vw.clipsToBounds = true
+        vw.layer.cornerRadius = 12
+        vw.layer.borderWidth = 1
+        vw.layer.borderColor = UIColor.black.cgColor
+        return vw
+    }()
+    
+    private let contentStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
     private let civBonusLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .white
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.font = .systemFont(ofSize: 18, weight: .bold)
-        lbl.clipsToBounds = true
-        lbl.layer.cornerRadius = 12
-        lbl.numberOfLines = 0
-        lbl.layer.borderWidth = 1
-        lbl.layer.borderColor = UIColor.black.cgColor
-        lbl.backgroundColor = .systemBlue
+        lbl.font = .systemFont(ofSize: 16, weight: .bold)
         lbl.textAlignment = .center
+        lbl.numberOfLines = 0
+//        lbl.clipsToBounds = true
+//        lbl.layer.cornerRadius = 12
+//        lbl.layer.borderWidth = 1
+//        lbl.layer.borderColor = UIColor.black.cgColor
+//        lbl.backgroundColor = .systemBlue
         return lbl
     }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-  
+    func configure(){
+        containerView.backgroundColor = .systemBlue
+        contentView.addSubview(containerView)
+        containerView.addSubview(contentStackView)
+        contentStackView.addArrangedSubview(civBonusLabel)
+        containerView.anchor(top: contentView.topAnchor, bottom: contentView.bottomAnchor, leading: contentView.leadingAnchor, trailing: contentView.trailingAnchor,padding: .init(top: 8, left: 0, bottom: 8, right: 0))
+        contentStackView.anchor(top: containerView.topAnchor, bottom: containerView.bottomAnchor, leading: containerView.leadingAnchor, trailing: containerView.trailingAnchor, padding: .init(top: 20, left: 20, bottom: 20, right: 20))
     }
     
-    override func layoutSubviews() {
-        contentView.addSubview(civBonusLabel)
-        civBonusLabel.anchor(top: contentView.topAnchor, bottom: contentView.bottomAnchor, leading: contentView.leadingAnchor, trailing: contentView.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 16, right: 0))
-    }
-    
-    func configure(bonusText: String){
+    func configureLabelText(bonusText: String){
+        
         civBonusLabel.text = bonusText
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+   
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
 }
