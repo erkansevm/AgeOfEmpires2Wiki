@@ -41,7 +41,7 @@ class DetailHeader: UITableViewHeaderFooterView {
         return lbl
     }()
     
-    private let uniqueUnitLink: UIButton = {
+     let uniqueUnitLink: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Unique Unit", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -53,7 +53,7 @@ class DetailHeader: UITableViewHeaderFooterView {
 
         return button
     }()
-    private let uniqueTechLink: UIButton = {
+     let uniqueTechLink: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Unique Tech", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -116,7 +116,7 @@ class DetailHeader: UITableViewHeaderFooterView {
         teamBonus.anchor(top: armyTypeLabel.bottomAnchor, bottom: nil, leading: armyTypeLabel.leadingAnchor, trailing: armyTypeLabel.trailingAnchor ,padding: .init(top: 16, left: 0, bottom: 0, right: 0) ,size: CGSize(width: 0, height: 70))
         uniquesStackView.anchor(top: teamBonus.bottomAnchor, bottom: nil, leading: teamBonus.leadingAnchor, trailing: teamBonus.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: CGSize(width: 0, height: 70))
     }
-    
+   
     func setupCivData(civ: Civilization){
         civNameLabel.text = civ.name
         expansionLabel.text = civ.expansion

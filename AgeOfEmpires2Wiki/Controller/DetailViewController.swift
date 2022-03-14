@@ -16,12 +16,14 @@ class DetailViewController: UIViewController {
         table.backgroundColor = .clear
         table.rowHeight = UITableView.automaticDimension
         table.estimatedRowHeight = 44
-        table.register(CivBonusTableViewCell.self, forCellReuseIdentifier: CivBonusTableViewCell.identifier)
+        table.register(CivBonusTableViewCell.self, forCellReuseIdentifier: CivBonusTableViewCell.identifier)    
         table.register(DetailHeader.self, forHeaderFooterViewReuseIdentifier: "header")
         
         return table
     }()
-  
+    
+    var uniqueUnit: Unit?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +31,31 @@ class DetailViewController: UIViewController {
         tableView.delegate = self
         view.backgroundColor = UIColor(named: "background")
         configureTableView()
+        fetchUnit()
         
     }
+    
+    func fetchUnit(){
+        guard let civ = civ else {
+            return
+        }
+        let urlString = civ.unique_unit[0]
+        NetworkManager.shared.getUnit(with: urlString) { [weak self]result in
+            switch result {
+            case .success( let data):
+                self?.uniqueUnit = data
+            case .failure( let error):
+                print(error)
+            }
+        }
+    }
 
+    @objc func goToUniqueUnitView(){
+        guard let unit = uniqueUnit else {
+            return
+        }
+        print(unit)
+    }
     func configureTableView(){
         view.addSubview(tableView)
         tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, padding: .init(top: 40, left: 16, bottom: 0, right: 16))
@@ -72,6 +96,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         guard let civ = civ else {
             return header
         }
+        header.uniqueUnitLink.addTarget(self, action: #selector(goToUniqueUnitView), for: .touchUpInside)
         header.setupCivData(civ: civ)
         return header
     }
