@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DA1A52D727D56F730045A43A /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A52D627D56F730045A43A /* Unit.swift */; };
+		DA6B300B27DF982F007604B5 /* UnitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B300A27DF982F007604B5 /* UnitDetailViewController.swift */; };
+		DA6B300D27DF9944007604B5 /* UnitDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B300C27DF9944007604B5 /* UnitDetailTableViewCell.swift */; };
+		DA6B300F27DF998C007604B5 /* UnitDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B300E27DF998C007604B5 /* UnitDetailHeader.swift */; };
 		DA782CAA27B5CE39000FFD27 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */; };
 		DA93978D27CFFBA000FC089E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93978C27CFFBA000FC089E /* DetailViewController.swift */; };
 		DAA8FEEF27B5C772006A525A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEEE27B5C772006A525A /* AppDelegate.swift */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		DA1A52D627D56F730045A43A /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		DA6B300A27DF982F007604B5 /* UnitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailViewController.swift; sourceTree = "<group>"; };
+		DA6B300C27DF9944007604B5 /* UnitDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailTableViewCell.swift; sourceTree = "<group>"; };
+		DA6B300E27DF998C007604B5 /* UnitDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailHeader.swift; sourceTree = "<group>"; };
 		DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA93978C27CFFBA000FC089E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DAA8FEEB27B5C772006A525A /* AgeOfEmpires2Wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgeOfEmpires2Wiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +78,8 @@
 				DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */,
 				DAFB33CA27D103A6004019FE /* CivBonusTableViewCell.swift */,
 				DAAC9D8B27D4207B00D0C435 /* DetailHeader.swift */,
+				DA6B300C27DF9944007604B5 /* UnitDetailTableViewCell.swift */,
+				DA6B300E27DF998C007604B5 /* UnitDetailHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -82,6 +90,7 @@
 				DAA8FEF227B5C772006A525A /* ViewController.swift */,
 				DAE7794027C7FE20004E6236 /* ItemsViewController.swift */,
 				DA93978C27CFFBA000FC089E /* DetailViewController.swift */,
+				DA6B300A27DF982F007604B5 /* UnitDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,15 +216,18 @@
 				DAE7794727C802D6004E6236 /* Civilization.swift in Sources */,
 				DAE7794327C8011B004E6236 /* NetworkManager.swift in Sources */,
 				DAE7794127C7FE20004E6236 /* ItemsViewController.swift in Sources */,
+				DA6B300B27DF982F007604B5 /* UnitDetailViewController.swift in Sources */,
 				DAA8FEF327B5C772006A525A /* ViewController.swift in Sources */,
 				DAA8FEEF27B5C772006A525A /* AppDelegate.swift in Sources */,
 				DAAC9D8C27D4207B00D0C435 /* DetailHeader.swift in Sources */,
 				DA782CAA27B5CE39000FFD27 /* CategoriesCollectionViewCell.swift in Sources */,
 				DAFB33CB27D103A6004019FE /* CivBonusTableViewCell.swift in Sources */,
 				DAFB33C927D0F562004019FE /* UIView+.swift in Sources */,
+				DA6B300D27DF9944007604B5 /* UnitDetailTableViewCell.swift in Sources */,
 				DA1A52D727D56F730045A43A /* Unit.swift in Sources */,
 				DAA8FEF127B5C772006A525A /* SceneDelegate.swift in Sources */,
 				DA93978D27CFFBA000FC089E /* DetailViewController.swift in Sources */,
+				DA6B300F27DF998C007604B5 /* UnitDetailHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

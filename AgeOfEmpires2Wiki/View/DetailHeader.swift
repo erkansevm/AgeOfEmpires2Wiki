@@ -94,6 +94,7 @@ class DetailHeader: UITableViewHeaderFooterView {
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = .clear
         contentView.addSubview(civNameLabel)
         contentView.addSubview(expansionLabel)
         contentView.addSubview(armyTypeLabel)
@@ -105,7 +106,6 @@ class DetailHeader: UITableViewHeaderFooterView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.backgroundColor = .clear
         configure()
     }
     

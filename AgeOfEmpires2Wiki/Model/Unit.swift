@@ -11,6 +11,7 @@ struct Unit: Codable {
     let id: Int
     let name: String
     let description: String
+    let expansion: String
     let age: String
     let createdIn: String
     let cost: Cost
@@ -20,7 +21,7 @@ struct Unit: Codable {
     let movementRate: Float?
     let lineOfSight: Float?
     let hitPoints: Float?
-    let range: String?
+    let range: Int?
     let attack: Int?
     let armor: String?
     let attackBonus: [String]?

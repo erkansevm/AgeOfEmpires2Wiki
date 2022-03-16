@@ -54,7 +54,9 @@ class DetailViewController: UIViewController {
         guard let unit = uniqueUnit else {
             return
         }
-        print(unit)
+        let vc = UnitDetailViewController()
+        vc.unit = unit
+        navigationController?.pushViewController(vc, animated: true)
     }
     func configureTableView(){
         view.addSubview(tableView)
