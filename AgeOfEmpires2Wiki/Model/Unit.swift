@@ -16,7 +16,7 @@ struct Unit: Codable {
     let createdIn: String
     let cost: Cost
     let buildTime: Float?
-    let reloadTime: Float
+    let reloadTime: Float?
     let attackDelay: Float?
     let movementRate: Float?
     let lineOfSight: Float?

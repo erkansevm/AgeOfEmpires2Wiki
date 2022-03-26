@@ -9,6 +9,36 @@ import UIKit
 
 extension UIView {
     
+    func fillSuperView() {
+        guard let superview = self.superview else {
+            print("No super view")
+            return
+        }
+        translatesAutoresizingMaskIntoConstraints = false
+
+        let viewConstraints : [NSLayoutConstraint] = [
+            leftAnchor.constraint(equalTo: superview.leftAnchor),
+            rightAnchor.constraint(equalTo: superview.rightAnchor),
+            topAnchor.constraint(equalTo: superview.topAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+        ]
+        NSLayoutConstraint.activate(viewConstraints)
+    }
+    
+    func centerInSuperview() {
+        guard let superview = self.superview else {
+            print("No super view")
+            return
+        }
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        let viewConstraints: [NSLayoutConstraint] = [
+            centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            centerXAnchor.constraint(equalTo: superview.centerXAnchor)
+        ]
+        NSLayoutConstraint.activate(viewConstraints)
+    }
+    
     
     
     func anchor(top: NSLayoutYAxisAnchor? ,bottom: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero){

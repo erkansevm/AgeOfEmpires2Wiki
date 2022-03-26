@@ -254,6 +254,7 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         
         stoneStackView.addArrangedSubview(stoneImage)
         stoneStackView.addArrangedSubview(stoneCostLabel)
+     
     }
     
     
@@ -268,9 +269,9 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         expansionLabel.anchor(top: unitNameLabel.bottomAnchor, bottom: nil, leading: unitNameLabel.leadingAnchor, trailing: unitNameLabel.trailingAnchor, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
         aboutStackView.anchor(top: expansionLabel.bottomAnchor, bottom: nil, leading: expansionLabel.leadingAnchor, trailing: expansionLabel.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
         containerStackView.anchor(top: aboutStackView.bottomAnchor, bottom: nil, leading: aboutStackView.leadingAnchor, trailing: aboutStackView.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: CGSize(width: 0, height: 60))
-        costContainerView.anchor(top: containerStackView.bottomAnchor, bottom: nil, leading: containerStackView.leadingAnchor, trailing: containerStackView.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: CGSize(width: 0, height: 60))
+        costContainerView.anchor(top: nil, bottom: contentView.bottomAnchor, leading: containerStackView.leadingAnchor, trailing: containerStackView.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 16, right: 0), size: CGSize(width: 0, height: 60))
         costStackView.anchor(top: costContainerView.topAnchor, bottom: costContainerView.bottomAnchor, leading: costContainerView.leadingAnchor, trailing: costContainerView.trailingAnchor, padding: .init(top: 5, left: 15, bottom: 5, right: 15))
-        
+
     }
     
     func configure(with unit: Unit){
@@ -292,12 +293,15 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
             stoneCostLabel.text = ":\(unit.cost.stone!)"
             stoneCostLabel.textColor = .systemRed
         }
-        
+    
         if  unit.cost.food != nil {
             foodCostLabel.text = ":\(unit.cost.food!)"
             foodCostLabel.textColor = .systemRed
-
         }
+        
+    
+        
+        
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
