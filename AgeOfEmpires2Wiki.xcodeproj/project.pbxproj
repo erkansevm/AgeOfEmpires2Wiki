@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DA1A52D727D56F730045A43A /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A52D627D56F730045A43A /* Unit.swift */; };
+		DA37213F27F04ED700E99E2A /* Tech.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37213E27F04ED700E99E2A /* Tech.swift */; };
 		DA6B300B27DF982F007604B5 /* UnitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B300A27DF982F007604B5 /* UnitDetailViewController.swift */; };
 		DA6B300D27DF9944007604B5 /* UnitDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B300C27DF9944007604B5 /* UnitDetailTableViewCell.swift */; };
 		DA6B300F27DF998C007604B5 /* UnitDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B300E27DF998C007604B5 /* UnitDetailHeader.swift */; };
 		DA782CAA27B5CE39000FFD27 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */; };
-		DA93978D27CFFBA000FC089E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93978C27CFFBA000FC089E /* DetailViewController.swift */; };
+		DA7EC27B27F051AF008ED0BB /* TechDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EC27A27F051AF008ED0BB /* TechDetailViewController.swift */; };
+		DA93978D27CFFBA000FC089E /* CivDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93978C27CFFBA000FC089E /* CivDetailViewController.swift */; };
 		DAA8FEEF27B5C772006A525A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEEE27B5C772006A525A /* AppDelegate.swift */; };
 		DAA8FEF127B5C772006A525A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEF027B5C772006A525A /* SceneDelegate.swift */; };
 		DAA8FEF327B5C772006A525A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEF227B5C772006A525A /* ViewController.swift */; };
@@ -29,11 +31,13 @@
 
 /* Begin PBXFileReference section */
 		DA1A52D627D56F730045A43A /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		DA37213E27F04ED700E99E2A /* Tech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech.swift; sourceTree = "<group>"; };
 		DA6B300A27DF982F007604B5 /* UnitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailViewController.swift; sourceTree = "<group>"; };
 		DA6B300C27DF9944007604B5 /* UnitDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailTableViewCell.swift; sourceTree = "<group>"; };
 		DA6B300E27DF998C007604B5 /* UnitDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailHeader.swift; sourceTree = "<group>"; };
 		DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
-		DA93978C27CFFBA000FC089E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DA7EC27A27F051AF008ED0BB /* TechDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechDetailViewController.swift; sourceTree = "<group>"; };
+		DA93978C27CFFBA000FC089E /* CivDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivDetailViewController.swift; sourceTree = "<group>"; };
 		DAA8FEEB27B5C772006A525A /* AgeOfEmpires2Wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgeOfEmpires2Wiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA8FEEE27B5C772006A525A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA8FEF027B5C772006A525A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			children = (
 				DAE7794627C802D6004E6236 /* Civilization.swift */,
 				DA1A52D627D56F730045A43A /* Unit.swift */,
+				DA37213E27F04ED700E99E2A /* Tech.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,8 +94,9 @@
 			children = (
 				DAA8FEF227B5C772006A525A /* ViewController.swift */,
 				DAE7794027C7FE20004E6236 /* ItemsViewController.swift */,
-				DA93978C27CFFBA000FC089E /* DetailViewController.swift */,
+				DA93978C27CFFBA000FC089E /* CivDetailViewController.swift */,
 				DA6B300A27DF982F007604B5 /* UnitDetailViewController.swift */,
+				DA7EC27A27F051AF008ED0BB /* TechDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -222,11 +228,13 @@
 				DAAC9D8C27D4207B00D0C435 /* DetailHeader.swift in Sources */,
 				DA782CAA27B5CE39000FFD27 /* CategoriesCollectionViewCell.swift in Sources */,
 				DAFB33CB27D103A6004019FE /* CivBonusTableViewCell.swift in Sources */,
+				DA37213F27F04ED700E99E2A /* Tech.swift in Sources */,
 				DAFB33C927D0F562004019FE /* UIView+.swift in Sources */,
 				DA6B300D27DF9944007604B5 /* UnitDetailTableViewCell.swift in Sources */,
 				DA1A52D727D56F730045A43A /* Unit.swift in Sources */,
 				DAA8FEF127B5C772006A525A /* SceneDelegate.swift in Sources */,
-				DA93978D27CFFBA000FC089E /* DetailViewController.swift in Sources */,
+				DA7EC27B27F051AF008ED0BB /* TechDetailViewController.swift in Sources */,
+				DA93978D27CFFBA000FC089E /* CivDetailViewController.swift in Sources */,
 				DA6B300F27DF998C007604B5 /* UnitDetailHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -37,6 +37,7 @@ final class NetworkManager {
     }
 
     public func getUnit(with url: String, completion: @escaping ((Result<Unit, Error>) -> Void)) {
+        print(url)
         guard let url = URL(string: url) else {
             completion(.failure(NetworkError.failedToFetch))
             return
@@ -53,6 +54,28 @@ final class NetworkManager {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let unit = try! decoder.decode(Unit.self, from: data)
             completion(.success(unit))
+        }
+        
+        task.resume()
+    }
+    
+    public func getTech(with url: String, completion: @escaping ((Result<Tech, Error>) -> Void)) {
+        guard let url = URL(string: url) else {
+            completion(.failure(NetworkError.failedToFetch))
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data, error == nil else {
+                print(error!)
+                completion(.failure(NetworkError.failedToFetch))
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let tech = try! decoder.decode(Tech.self, from: data)
+            completion(.success(tech))
         }
         
         task.resume()

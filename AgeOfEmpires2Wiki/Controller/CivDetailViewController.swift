@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class CivDetailViewController: UIViewController {
     
     var civ: Civilization?
     private let tableView: UITableView = {
@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
     }()
     
     var uniqueUnit: Unit?
+    var uniqueTech: Tech?
     
     
     override func viewDidLoad() {
@@ -32,6 +33,7 @@ class DetailViewController: UIViewController {
         view.backgroundColor = UIColor(named: "background")
         configureTableView()
         fetchUnit()
+        fetchTech()
         
     }
     
@@ -50,6 +52,20 @@ class DetailViewController: UIViewController {
         }
     }
 
+    func fetchTech() {
+        guard let civ = civ else {
+            return
+        }
+        let urlString = civ.unique_tech[0]
+        NetworkManager.shared.getTech(with: urlString) { [weak self]result in
+            switch result {
+            case .success( let data):
+                self?.uniqueTech = data
+            case .failure( let error):
+                print(error)
+            }
+        }
+    }
     @objc func goToUniqueUnitView(){
         guard let unit = uniqueUnit else {
             return
@@ -58,6 +74,15 @@ class DetailViewController: UIViewController {
         vc.unit = unit
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc func goToUniqueTechView(){
+        guard let tech = uniqueTech else {
+            print("No Tech data")
+            return
+        }
+    }
+    
+    
     func configureTableView(){
         view.addSubview(tableView)
         tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, padding: .init(top: 40, left: 16, bottom: 0, right: 16))
@@ -68,7 +93,7 @@ class DetailViewController: UIViewController {
 
 
 
-extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
+extension CivDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let civ = civ else {
             return 1

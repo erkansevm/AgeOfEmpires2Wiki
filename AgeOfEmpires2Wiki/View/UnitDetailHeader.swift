@@ -33,7 +33,7 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.axis = .vertical
-        stackView.spacing = 4
+//        stackView.spacing = 4
         //        stackView.clipsToBounds = true
         //        stackView.layer.cornerRadius = 12
         //        stackView.layer.borderWidth = 1
@@ -98,7 +98,7 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
-        stackView.spacing = 28
+//        stackView.spacing = 28
         return stackView
     }()
     
@@ -117,7 +117,7 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
-        stackView.spacing = 10
+//        stackView.spacing = 10
        
         return stackView
     }()
@@ -127,7 +127,7 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
-        stackView.spacing = 2
+//        stackView.spacing = 2
         return stackView
     }()
     
@@ -136,7 +136,7 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
-        stackView.spacing = 2
+//        stackView.spacing = 2
         return stackView
     }()
     
@@ -145,7 +145,7 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
-        stackView.spacing = 2
+//        stackView.spacing = 2
         return stackView
     }()
     
@@ -154,7 +154,7 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
-        stackView.spacing = 2
+//        stackView.spacing = 2
         return stackView
     }()
     
@@ -262,6 +262,7 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
     override func layoutSubviews() {
         super.layoutSubviews()
         setupConstraints()
+        setSpacingOfStackViews()
     }
     
     func setupConstraints(){
@@ -272,6 +273,16 @@ class UnitDetailHeader: UITableViewHeaderFooterView {
         costContainerView.anchor(top: nil, bottom: contentView.bottomAnchor, leading: containerStackView.leadingAnchor, trailing: containerStackView.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 16, right: 0), size: CGSize(width: 0, height: 60))
         costStackView.anchor(top: costContainerView.topAnchor, bottom: costContainerView.bottomAnchor, leading: costContainerView.leadingAnchor, trailing: costContainerView.trailingAnchor, padding: .init(top: 5, left: 15, bottom: 5, right: 15))
 
+    }
+    
+    func setSpacingOfStackViews(){
+        aboutStackView.spacing = 4
+        containerStackView.spacing = 28
+        costStackView.spacing = 10
+        goldStackView.spacing = 2
+        foodStackView.spacing = 2
+        stoneStackView.spacing = 2
+        woodStackView.spacing = 2
     }
     
     func configure(with unit: Unit){
