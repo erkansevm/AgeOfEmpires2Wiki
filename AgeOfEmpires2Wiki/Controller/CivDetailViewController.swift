@@ -34,6 +34,7 @@ class CivDetailViewController: UIViewController {
         configureTableView()
         fetchUnit()
         fetchTech()
+        print("annen")
         
     }
     
@@ -60,6 +61,7 @@ class CivDetailViewController: UIViewController {
         NetworkManager.shared.getTech(with: urlString) { [weak self]result in
             switch result {
             case .success( let data):
+                print(data)
                 self?.uniqueTech = data
             case .failure( let error):
                 print(error)
@@ -80,6 +82,10 @@ class CivDetailViewController: UIViewController {
             print("No Tech data")
             return
         }
+        
+        let vc = TechDetailViewController()
+        vc.tech = tech
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -124,6 +130,7 @@ extension CivDetailViewController: UITableViewDelegate, UITableViewDataSource {
             return header
         }
         header.uniqueUnitLink.addTarget(self, action: #selector(goToUniqueUnitView), for: .touchUpInside)
+        header.uniqueTechLink.addTarget(self, action: #selector(goToUniqueTechView), for: .touchUpInside)
         header.setupCivData(civ: civ)
         return header
     }

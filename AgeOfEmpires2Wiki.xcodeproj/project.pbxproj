@@ -15,6 +15,7 @@
 		DA782CAA27B5CE39000FFD27 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */; };
 		DA7EC27B27F051AF008ED0BB /* TechDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EC27A27F051AF008ED0BB /* TechDetailViewController.swift */; };
 		DA93978D27CFFBA000FC089E /* CivDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93978C27CFFBA000FC089E /* CivDetailViewController.swift */; };
+		DA9DAD4227FCD7A600BF196B /* TechDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9DAD4127FCD7A600BF196B /* TechDetailHeader.swift */; };
 		DAA8FEEF27B5C772006A525A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEEE27B5C772006A525A /* AppDelegate.swift */; };
 		DAA8FEF127B5C772006A525A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEF027B5C772006A525A /* SceneDelegate.swift */; };
 		DAA8FEF327B5C772006A525A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8FEF227B5C772006A525A /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA7EC27A27F051AF008ED0BB /* TechDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechDetailViewController.swift; sourceTree = "<group>"; };
 		DA93978C27CFFBA000FC089E /* CivDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivDetailViewController.swift; sourceTree = "<group>"; };
+		DA9DAD4127FCD7A600BF196B /* TechDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechDetailHeader.swift; sourceTree = "<group>"; };
 		DAA8FEEB27B5C772006A525A /* AgeOfEmpires2Wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgeOfEmpires2Wiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA8FEEE27B5C772006A525A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA8FEF027B5C772006A525A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		DA782CA527B5CD75000FFD27 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA9DAD3E27FCC8A400BF196B /* ReusableViewComponents */,
 				DAA8FEF727B5C774006A525A /* Assets.xcassets */,
 				DA782CA727B5CD85000FFD27 /* Storyboards */,
 				DA782CA927B5CE39000FFD27 /* CategoriesCollectionViewCell.swift */,
@@ -85,6 +88,7 @@
 				DAAC9D8B27D4207B00D0C435 /* DetailHeader.swift */,
 				DA6B300C27DF9944007604B5 /* UnitDetailTableViewCell.swift */,
 				DA6B300E27DF998C007604B5 /* UnitDetailHeader.swift */,
+				DA9DAD4127FCD7A600BF196B /* TechDetailHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +123,13 @@
 				DAFB33C827D0F562004019FE /* UIView+.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA9DAD3E27FCC8A400BF196B /* ReusableViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableViewComponents;
 			sourceTree = "<group>";
 		};
 		DAA8FEE227B5C772006A525A = {
@@ -234,6 +245,7 @@
 				DA1A52D727D56F730045A43A /* Unit.swift in Sources */,
 				DAA8FEF127B5C772006A525A /* SceneDelegate.swift in Sources */,
 				DA7EC27B27F051AF008ED0BB /* TechDetailViewController.swift in Sources */,
+				DA9DAD4227FCD7A600BF196B /* TechDetailHeader.swift in Sources */,
 				DA93978D27CFFBA000FC089E /* CivDetailViewController.swift in Sources */,
 				DA6B300F27DF998C007604B5 /* UnitDetailHeader.swift in Sources */,
 			);

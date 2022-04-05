@@ -15,6 +15,6 @@ struct Tech: Codable {
     let age: String
     let developsIn: String
     let cost: Cost
-    let buildTime: Float
-    let appliesTo: [String]
+    let buildTime: Float?
+    let appliesTo: [String]?
 }
