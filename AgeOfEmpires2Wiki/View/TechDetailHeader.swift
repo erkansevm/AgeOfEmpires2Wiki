@@ -9,7 +9,7 @@ import UIKit
 
 class TechDetailHeader: UITableViewHeaderFooterView {
     static let identifier = "TechDetailHeader"
-    
+
     private let techNameLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .label
@@ -17,7 +17,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         lbl.font = .systemFont(ofSize: 40, weight: .bold)
         return lbl
     }()
-    
+
     private let expansionLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .secondaryLabel
@@ -25,7 +25,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         lbl.font = .systemFont(ofSize: 32, weight: .bold)
         return lbl
     }()
-    
+
     private let aboutStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
@@ -39,7 +39,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         //        stackView.backgroundColor = .white
         return stackView
     }()
-    
+
     private let descriptionTitle: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .label
@@ -48,7 +48,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         lbl.text = "Bonus:"
         return lbl
     }()
-    
+
     private let descriptionLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .systemGreen
@@ -61,10 +61,10 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         //        lbl.layer.borderColor = UIColor.black.cgColor
         //        lbl.backgroundColor = .white
         lbl.textAlignment = .left
-        
+
         return lbl
     }()
-    
+
     private let containerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
@@ -72,7 +72,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         stackView.axis = .horizontal
         return stackView
     }()
-    
+
     private let ageLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .white
@@ -82,10 +82,10 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         lbl.layer.borderWidth = 1
         lbl.clipsToBounds = true
         lbl.font = .systemFont(ofSize: 18, weight: .bold)
-        
+
         return lbl
     }()
-    
+
     let createdInButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Creatid in 👆🏻", for: .normal)
@@ -95,7 +95,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         button.layer.borderWidth = 1
         button.clipsToBounds = true
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
-        
+
         return button
     }()
 
@@ -108,17 +108,17 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         vw.clipsToBounds = true
         return vw
     }()
-    
+
     private let costStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
 //        stackView.spacing = 10
-       
+
         return stackView
     }()
-    
+
     private let goldStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
@@ -127,7 +127,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
 //        stackView.spacing = 2
         return stackView
     }()
-    
+
     private let foodStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
@@ -136,7 +136,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
 //        stackView.spacing = 2
         return stackView
     }()
-    
+
     private let stoneStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
@@ -145,7 +145,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
 //        stackView.spacing = 2
         return stackView
     }()
-    
+
     private let woodStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
@@ -154,13 +154,13 @@ class TechDetailHeader: UITableViewHeaderFooterView {
 //        stackView.spacing = 2
         return stackView
     }()
-    
+
     private let woodImage: UIImageView = {
         let img = UIImageView(image: UIImage(named: "wood"))
         img.contentMode = .scaleAspectFit
         return img
     }()
-    
+
     private let woodCostLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .systemGreen
@@ -171,13 +171,13 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         lbl.text = ": 0"
         return lbl
     }()
-    
+
     private let foodImage: UIImageView = {
         let img = UIImageView(image: UIImage(named: "food"))
         img.contentMode = .scaleAspectFit
         return img
     }()
-    
+
     private let foodCostLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .systemGreen
@@ -188,13 +188,13 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         lbl.text = ": 0"
         return lbl
     }()
-    
+
     private let goldImage: UIImageView = {
         let img = UIImageView(image: UIImage(named: "gold"))
         img.contentMode = .scaleAspectFit
         return img
     }()
-    
+
     private let goldCostLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .systemGreen
@@ -205,13 +205,13 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         lbl.text = ": 0"
         return lbl
     }()
-    
+
     private let stoneImage: UIImageView = {
         let img = UIImageView(image: UIImage(named: "stone"))
         img.contentMode = .scaleAspectFit
         return img
     }()
-    
+
     private let stoneCostLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .systemGreen
@@ -232,34 +232,34 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         costContainerView.addSubview(costStackView)
         aboutStackView.addArrangedSubview(descriptionTitle)
         aboutStackView.addArrangedSubview(descriptionLabel)
-        
+
         containerStackView.addArrangedSubview(ageLabel)
         containerStackView.addArrangedSubview(createdInButton)
-        
+
         costStackView.addArrangedSubview(goldStackView)
         costStackView.addArrangedSubview(woodStackView)
         costStackView.addArrangedSubview(stoneStackView)
         costStackView.addArrangedSubview(foodStackView)
-        
+
         woodStackView.addArrangedSubview(woodImage)
         woodStackView.addArrangedSubview(woodCostLabel)
-        
+
         foodStackView.addArrangedSubview(foodImage)
         foodStackView.addArrangedSubview(foodCostLabel)
-        
+
         goldStackView.addArrangedSubview(goldImage)
         goldStackView.addArrangedSubview(goldCostLabel)
-        
+
         stoneStackView.addArrangedSubview(stoneImage)
         stoneStackView.addArrangedSubview(stoneCostLabel)
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         setupConstraints()
         setSpacingOfStackViews()
     }
-    
+
     func setupConstraints(){
         techNameLabel.anchor(top: contentView.topAnchor, bottom: nil, leading: contentView.leadingAnchor, trailing: contentView.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
         expansionLabel.anchor(top: techNameLabel.bottomAnchor, bottom: nil, leading: techNameLabel.leadingAnchor, trailing: techNameLabel.trailingAnchor, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
@@ -268,7 +268,7 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         costContainerView.anchor(top: containerStackView.bottomAnchor, bottom: nil, leading: containerStackView.leadingAnchor, trailing: containerStackView.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: CGSize(width: 0, height: 60))
         costStackView.anchor(top: costContainerView.topAnchor, bottom: costContainerView.bottomAnchor, leading: costContainerView.leadingAnchor, trailing: costContainerView.trailingAnchor, padding: .init(top: 5, left: 15, bottom: 5, right: 15))
     }
-    
+
     func setSpacingOfStackViews(){
         aboutStackView.spacing = 4
         containerStackView.spacing = 18
@@ -278,37 +278,38 @@ class TechDetailHeader: UITableViewHeaderFooterView {
         stoneStackView.spacing = 1
         woodStackView.spacing = 1
     }
-    
+
     func configure(with tech: Tech){
         techNameLabel.text = tech.name
         expansionLabel.text = tech.expansion
         descriptionLabel.text = tech.description
         ageLabel.text = tech.age
-        
+
         if  tech.cost.wood != nil {
             woodCostLabel.text = ":\(tech.cost.wood!)"
             woodCostLabel.textColor = .systemRed
         }
-        
+
         if  tech.cost.gold != nil {
             goldCostLabel.text = ":\(tech.cost.gold!)"
             goldCostLabel.textColor = .systemRed
         }
-        
+
         if  tech.cost.stone != nil {
             stoneCostLabel.text = ":\(tech.cost.stone!)"
             stoneCostLabel.textColor = .systemRed
         }
-    
+
         if  tech.cost.food != nil {
             foodCostLabel.text = ":\(tech.cost.food!)"
             foodCostLabel.textColor = .systemRed
         }
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
 
 }
+

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Tech: Codable {
+struct Tech: Codable, ModelGeneral {
     let id: Int
     let name: String
     let description: String

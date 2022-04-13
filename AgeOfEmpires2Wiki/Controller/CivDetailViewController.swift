@@ -57,6 +57,12 @@ class CivDetailViewController: UIViewController {
         guard let civ = civ else {
             return
         }
+//        let mirroredObject = Mirror(reflecting: civ)
+//        for (index, attr) in mirroredObject.children.enumerated() {
+//            if let propertyName = attr.label as String? {
+//                print("Attr \(index): \(propertyName) = \(attr.value)")
+//            }
+//        }
         let urlString = civ.unique_tech[0]
         NetworkManager.shared.getTech(with: urlString) { [weak self]result in
             switch result {
@@ -83,7 +89,7 @@ class CivDetailViewController: UIViewController {
             return
         }
         
-        let vc = TechDetailViewController()
+        let vc = TechDetail2ViewController()
         vc.tech = tech
         navigationController?.pushViewController(vc, animated: true)
     }

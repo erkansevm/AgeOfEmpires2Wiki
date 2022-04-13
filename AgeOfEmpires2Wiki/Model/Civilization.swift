@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Civilization: Codable {
+struct Civilization: Codable, ModelGeneral {
     let id: Int
     let name: String
     let expansion: String

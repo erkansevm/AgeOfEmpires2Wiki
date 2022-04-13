@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Unit: Codable {
+struct Unit: Codable, ModelGeneral {
     let id: Int
     let name: String
     let description: String
